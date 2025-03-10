@@ -90,10 +90,10 @@ const recordAudio = () => {
     const stop = () =>
       new Promise((resolve) => {
         mediaRecorder.addEventListener("stop", () => {
-          const audioBlob = new Blob(audioChunks, { type: "audio/webm" });
+          const audioBlob = new Blob(audioChunks, { type: "audio/mpeg" });
           const audioUrl = URL.createObjectURL(audioBlob);
           console.log("blob size: " + audioBlob.size)
-          saveBlobToFileFileSystem(audioBlob);
+          //saveBlobToFileFileSystem(audioBlob);
           const audio = new Audio(audioUrl);
           const play = () => audio.play();
           resolve({ audioBlob, audioUrl, play });

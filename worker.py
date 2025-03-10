@@ -18,8 +18,7 @@ def speech_to_text(audio_binary):
     #}
 
     params = {
-        'model' : 'en-US_Telephony',
-        'content-type' : "audio/webm"
+        'model' : 'en-US_Multimedia',
     }
 
     # Set up the body of our HTTP request
